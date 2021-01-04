@@ -1,0 +1,94 @@
+@charset "UTF-8";
+.logo-large{background-image:url(images/FloodFM_Logo_White_BlueShadow_small.png);background-repeat:no-repeat;background-position:0 0;position:relative;top:0;left:0;width:134px;height:134px; margin:0 auto; border:none;background-size:134px 134px;}
+.glyphishIcon .ui-icon{
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	border-radius: 0px;	
+	background-color:transparent;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+.ui-icon-notes{
+	background-image: url(./images/Glyphish/icons/icons-white/194-note-2.png);
+	height:23px; 
+	width:23px; 
+	background-size:23px 23px;  
+	-moz-background-size: 23px 23px;
+	-o-background-size: 23px 23px;
+	-webkit-background-size: 23px 23px;
+	margin-left: -11.5px !important; 
+} 
+.ui-icon-magnify{
+	background-image: url(./images/Glyphish/icons/icons-white/06-magnify.png);
+	height:24px; 
+	width:24px;
+	background-size:24px 24px; 
+	-moz-background-size: 24px 24px;
+	-o-background-size: 24px 24px;
+	-webkit-background-size: 24px 24px;
+	margin-left: -12.5px !important; 
+} 
+.ui-icon-calendar{
+	background-image: url(./images/Glyphish/icons/icons-white/83-calendar.png);
+	height:25px; 
+	width:25px;
+	background-size:25px 25px; 
+	-moz-background-size: 25px 25px;
+	-o-background-size: 25px 25px;
+	-webkit-background-size: 25px 25px;
+	margin-left: -12.5px !important; 
+} 
+.ui-icon-gears{
+	background-image: url(./images/Glyphish/icons/icons-white/20-gear-2.png);
+	height:28px; 
+	width:28px;
+	background-size:28px 28px; 
+	-moz-background-size: 28px 28px;
+	-o-background-size: 28px 28px;
+	-webkit-background-size: 28px 28px;
+	margin-left: -14px !important; 
+} 
+.ui-icon-note{
+	background-image: url(images/note18.png) !important;
+	-moz-background-size: 18px 18px;
+	-o-background-size: 18px 18px;
+	-webkit-background-size: 18px 18px;
+	background-size: 18px 18px;
+}
+.mixGenreToggle{ text-align:center;}
+#audioContainer,#globalComponents{display:none;}
+.paragraphIcon{float:left; margin-right:1em; margin-bottom:.25em;}
+.glyphishHeartWhite{background-image: url(./images/Glyphish/icons/icons-white/29-heart.png); width:24px;height:21px; background-size:24px 21px; background-repeat:no-repeat; background-position:center center;}
+.glyphishWhiteGps{background-image: url(./images/Glyphish/icons/icons-white/73-radar.png);height:27px;width:27px; background-size:27px 27px; background-repeat:no-repeat; background-position:center center;}
+.glyphishWhiteMicrophone{background-image: url(./images/Glyphish/icons/icons-white/66-microphone.png);height:24px;width:27px; background-size:12px 24px; background-repeat:no-repeat; background-position:center center;}
+#welcome p{margin-bottom:2em;}
+p{font-weight:bold;}
+
+
+/* HD / Retina
+-----------------------------------------------------------------------------------------------------------*/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.2),
+       only screen and (min--moz-device-pixel-ratio: 1.2),
+       only screen and (min-resolution: 200dpi) {
+	.logo-large{background-image:url(images/FloodFM_Logo_White_BlueShadow.png);}
+	.ui-icon-notes{
+		background-image: url(./images/Glyphish/icons/icons-white/194-note-2@2x.png);
+	}
+	.ui-icon-magnify{
+		background-image: url(./images/Glyphish/icons/icons-white/06-magnify@2x.png);
+	}
+	.ui-icon-calendar{
+		background-image: url(./images/Glyphish/icons/icons-white/83-calendar.png);
+	}
+	.ui-icon-gears{
+		background-image: url(./images/Glyphish/icons/icons-white/20-gear-2@2x.png);
+	}
+	.ui-icon-note{
+		background-image: url(images/note36.png) !important;
+	}
+	.glyphishHeartWhite{background-image: url(./images/Glyphish/icons/icons-white/29-heart@2x.png);}
+	.glyphishWhiteGps{background-image: url(./images/Glyphish/icons/icons-white/73-radar@2x.png);}
+	.glyphishWhiteMicrophone{background-image: url(./images/Glyphish/icons/icons-white/66-microphone@2x.png);}
+}
+	

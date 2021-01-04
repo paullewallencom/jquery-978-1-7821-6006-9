@@ -1,0 +1,114 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+
+.certifiedFresh{ display:inline-block; background-image:url(../images/rtratings.png); background-repeat:no-repeat;padding-left:35px;  height:25px; background-size:25px 150px;background-position:0px -50px}
+.audienceFresh{ clear:both; display:inline-block; background-image:url(../images/rtratings.png); background-repeat:no-repeat;padding-left:35px;  height:25px; background-size:25px 150px;background-position:0px -75px}
+.logoContainer{text-align:center;margin:auto}
+.ui-li-has-thumb .ui-btn-inner a.ui-link-inherit, .ui-li-static.ui-li-has-thumb {
+	padding-left: 80px;
+}
+.pageTitle{margin-left:15px;}
+.clear{clear:both;}
+.center{ text-align:center;}
+.makersMark{margin:1.5em auto; text-align:center;}
+.ui-li-desc{white-space:normal;}
+label{font-weight:bold;}
+label.error,input.error{border:1px solid #f7c942;background:#fadb4e;color:#333;text-shadow:0 1px 0 #fff;background-image:-webkit-gradient(linear,left top,left bottom,from(#fceda7),to(#fbef7e));background-image:-webkit-linear-gradient(#fceda7,#fbef7e);background-image:-moz-linear-gradient(#fceda7,#fbef7e);background-image:-ms-linear-gradient(#fceda7,#fbef7e);background-image:-o-linear-gradient(#fceda7,#fbef7e);background-image:linear-gradient(#fceda7,#fbef7e)}
+.ui-header{ background-image:url(../images/headerSmall.png);background-position-x: -85px;}
+.ui-icon{ background-color:#C79D44;}
+#poster{float:left; margin-right:10px;margin-bottom:10px;}
+#showtimes{clear:both;}
+#movieDetailsPage{ background:#EFEFEF;}
+#movieDetailsPage .ui-content{ background:#fff; padding:15px 10px; margin:0 5px;}
+		
+.fullSite{text-align:center;}
+.copyright{text-align:center; marign-top:2em;}
+.movieListings .ui-li-link-alt .ui-btn{ 
+	display:none; 
+}
+.movieListings .ui-li-link-alt .ui-btn-inner{ 
+	background-image:url(icons/icons-gray/46-movie-2.png);
+	background-repeat:no-repeat;
+	background-size:20px 25px;
+	background-position:10px center;
+	border-radius:none;
+}
+.theaterName{font-size:120%; font-weight:bold;}
+.directionsBar .icon{
+	  height:28px;
+	  width:34px;
+	  margin:auto;
+	  background-repeat:no-repeat;
+	  background-position:center center;
+}
+.directionsBar .driving{
+	background-image:url(../icons/xtras-white/16-car.png);
+	background-size:34px 19px;
+}
+.directionsBar .transit{
+	background-image:url(../icons/xtras-white/15-bus.png);
+	background-size:22px 28px;
+}
+.directionsBar .bicycle{
+	background-image:url(../icons/xtras-white/13-bicycle.png);
+	background-size:34px 21px;
+}
+.directionsBar .walking{
+	background-image:url(../icons/icons-white/102-walk.png);
+	background-size:14px 27px;
+}
+.theaterAddress{
+	padding-left:35px;
+	background-image:url(../icons/icons-gray/193-location-arrow.png);
+	background-size:24px 24px;
+	background-repeat:no-repeat;
+	
+}
+.theaterPhone{
+	padding-left:35px;
+	background-image:url(../icons/icons-gray/75-phone.png);
+	background-size:24px 24px;
+	background-repeat:no-repeat;
+	height: 24px;
+	
+}
+#map_canvas {
+	height: 150px;
+}
+
+				
+/* Horizontal ----------*/
+@media all and (min-width: 480px){
+	#showtimes{clear:none;}
+}
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+   only screen and (min--moz-device-pixel-ratio: 1.5),
+   only screen and (min-resolution: 240dpi) {
+		.directionsBar .driving{
+			background-image:url(../icons/xtras-white/16-car@2x.png);
+		}
+		.directionsBar .transit{
+			background-image:url(../icons/xtras-white/15-bus@2x.png);
+		}
+		.directionsBar .bicycle{
+			background-image:url(../icons/xtras-white/13-bicycle@2x.png);
+		}
+		.directionsBar .walking{
+			background-image:url(../icons/icons-white/102-walk@2x.png);
+		}
+		.theaterAddress{
+			background-image:url(../icons/icons-gray/193-location-arrow@2x.png);
+		}
+		.theaterPhone{
+			background-image:url(../icons/icons-gray/75-phone@2x.png);
+		}
+}
+
+/* iPad ----------------*/
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+#preview{ height:380px;}
+}

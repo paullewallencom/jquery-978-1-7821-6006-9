@@ -1,0 +1,36 @@
+
+<!DOCTYPE html> 
+<html>
+
+<head>
+	<title>JSON Test</title> 
+</head> 
+ 
+<body> 
+ 
+<script type="text/javascript">
+	var myFeedList = {
+		"lastUpdated":"whenever",
+		"feeds":[ 
+			{
+				"name":"ars",
+				"url":"http://feeds.arstechnica.com/arstechnica/index?format=xml"
+			},
+			{
+				"name":"rbds",
+				"url":"http://roughlybrilliant.com/rss.xml"
+			}
+		]
+	}
+	
+	myFeedList.lastUpdated = new Date();
+	
+	localStorage.feedList = JSON.stringify(myFeedList);
+	
+	var myFeedListRetrieved = JSON.parse(localStorage.feedList);
+	
+	alert(myFeedListRetrieved.lastUpdated);
+</script>
+
+</body>
+</html>

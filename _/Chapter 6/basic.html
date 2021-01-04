@@ -1,0 +1,41 @@
+
+<!DOCTYPE html> 
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <link href='http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
+    <link href='chapter6.css' rel='stylesheet' type='text/css'>
+	<title>Lindsey Sterling</title> 
+	<link rel="stylesheet" href="jquery.mobile-1.2.0-rc.1.min.css" />
+	<script src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/global.js"></script>
+	<script src="js/jquery.mobile-1.2.0-rc.1.min.js"></script>
+    <script type="text/javascript" src="js/jsrender.min.js"></script>
+    <script type="text/javascript" src="js/basicPlayer.js"></script>
+    <link rel="stylesheet" href="chapter6.css" />
+</head> 
+ 
+<body id="body"> 
+
+<div id="home" data-role="page">
+	<div data-role="header"><h1>Lindsey Stirling</h1><a class="ui-btn-right" data-transition="slidedown" data-theme="c" href="tracklist.html" data-icon="note" data-iconpos="notext" >Music</a></div>
+    <div data-role="content">
+    	<ul id="homemenu" data-role="listview" data-inset="true">
+        	<li><a href="news.html">News</a></li>
+            <li><a href="tour.html">Tour</a></li>
+            <li><a href="electricdaisy.html">Music</a></li>
+        </ul>
+        <div id="twitterFeed"><ul class="curl"></ul></div>
+    </div>
+	<script type="text/x-jsrender" id="twitterTemplate">
+        <li class="twitterItem">
+            <img src="{{:user.profile_image_url}}" alt="profile image" class="ui-shadow ui-corner-all" />
+            <p>{{:text}}</p>
+        </li>
+    </script>
+</div>
+
+</body>
+</html>

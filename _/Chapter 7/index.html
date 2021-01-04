@@ -1,0 +1,212 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+	<title>Mullinax Photography</title> 
+	<link rel="stylesheet" href="jquery.mobile.structure-1.2.0.min.css" />
+    <link rel="stylesheet" href="mullinax.min.css" />
+    <link rel="stylesheet" href="photoswipe.css" />
+    <link rel="stylesheet" href="chapter7.css" />
+    <link rel="stylesheet" href="" id="rotatingBackgrounds" />
+    <script type="text/javascript">document.getElementById("rotatingBackgrounds").href=("rotating" + Math.floor(Math.random()*4) + ".css")</script>
+    <link href='http://fonts.googleapis.com/css?family=Euphoria+Script' rel='stylesheet' type='text/css'>
+    
+    <script src="js/klass.min.js"></script>
+	<script src="js/jquery.js"></script>
+    <script src="js/global.js"></script>
+	<script src="js/jquery.mobile-1.2.0.min.js"></script>
+    <script src="js/code.photoswipe.jquery-3.0.5.min.js"></script>
+    <script src="js/code.photoswipe.galleryinit.js"></script>
+   	<script type="text/javascript">
+	
+		$(window).bind("orientationchange", function(event){
+			$("body").removeClass("portrait").removeClass("landscape").addClass(event.orientation);
+			resizeContentHeight();
+		});
+		
+		$(window).bind("resize", function(){
+			resizeContentHeight();
+		});
+		
+		$(document).ready(function(e) {
+			var width = $(window).width();
+			var height = $(window).height();
+			if( width > height){ 
+				$("body").addClass("landscape");					
+			}else{ 
+				$("body").addClass("portrait");
+			}
+			resizeContentHeight();
+		});
+		
+		function resizeContentHeight(){
+			var width = $(window).width();
+			var height = $(window).height();
+			if(width >= 1024){
+				$.mobile.activePage.find(".textContainer").css({"height":(height - 120)});
+			}else{
+				$.mobile.activePage.find(".textContainer").css({"height":"auto"});
+			}
+		}
+	</script>
+</head> 
+
+<body> 
+
+<div id="home" data-role="page">
+    <div class="logoContainer">
+        <img class="logo" src="images/logo.png" border="0" alt="Mullinax Photography" />
+    </div> 
+	<div data-role="content">	
+    	<div class="artisticNav">
+            <ul data-role="listview" data-inset="true">
+                <li><a href="#gallery">Portraits</a></li> 
+                <li><a href="#sessions">Sessions</a></li>
+                <li><a href="#familes">Proofs</a></li> 
+            </ul>
+        </div>
+	</div><!-- /content -->
+    <div data-role="footer">
+        <div data-role="navbar" data-position="fixed">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div><!-- /navbar -->   
+    </div>
+</div><!-- /page -->
+
+<div id="sessions" data-role="page">
+    <div class="logoContainer">
+        <a href="#home"><img class="logo" src="images/logo.png" alt="Mullinax Photography" border="0" /></a>
+    </div>
+	<div data-role="content">	
+    	<div class="textContainer ui-shadow">
+        	<h3>For Your Session</h3>
+            
+            <p>Portrait sessions may be held at our Western Shawnee Studio, in the comfort of your home, or a location of your choice.  I love capturing little ones in their natural environment. At home, children often feel more comfortable and are more likely to play and have fun. It's the perfect environment for capturing those sweet little smiles and laughs that you as a parent adore!!</p>
+
+            <p>I strive to make each portrait session relaxed, fun, and beautiful. Like each child, each session will be unique to fit your family’s needs. As a mother, I understand firsthand the challenges that come with photographing little ones. The perfect portrait can take time. Being the perfect model is hard work and often breaks are needed.  That is why each of my sessions are held without time constraints. A one-of-a-kind portrait cannot be rushed!! While I don't want to overstay my welcome, I do want to stay long enough that you and I are both satisfied with the portraits that were captured.</p>
+                
+            <h3>After Your Session</h3>
+                
+            <p>Approximately two weeks after your session, I will post an online gallery for you to view your proofs as well as share with friends and family. Your proof gallery will stay online for 10 days. At this time you have the option of placing your order through the website using our shopping cart or you can schedule an in-person appointment.</p>
+                
+            <p>Your portraits will be available to be picked up 10-14 days after your ordering appointment.</p>
+                
+            <p>All ordered images are kept for one year in the event you should need to order more.</p>
+                
+            <p>All un-ordered proofs will be discarded after 30 days.</p>
+                
+            <h3>Classic Sessions - $200</h3>
+                
+            <p>This includes the time and talent of the photographer, a custom 1-2 hour session either on location or in our Studio, and a gallery of 25-30 portraits to choose from.  This session includes up to 4 children and parents.</p>
+            <h3>Blessed Beginnings Newborn Sessions - $300</h3>
+            
+            <p>This includes the time and talent of the photographer, a session either in the comfort of your home or in our Studio, and a gallery of 25-30 portraits to choose from.  Newborn sessions are available for babies 14 days or younger.</p>
+                
+            <h3>Portraits</h3>
+                
+            <p>Portraits start at $25.00. There is a minimum of $350.00 minimum purchase with each of our sessions.</p>
+                      
+            <p>Contact Jennifer at <a href="mailto:jennifer@mullinaxphotography.com">jennifer@mullinaxphotography.com</a> for complete pricing!!</p>
+                
+            <h3>Gift Certificates</h3>
+                
+            <p>Gift certificates are always the <em>perfect</em> gift starting $250.00.</p>
+                
+            <p><em>* All orders are final and non-refundable.</em></p>
+                
+            <p><em>* All prices and fees subject to change without notice.</em></p>
+        </div>
+	</div><!-- /content -->
+    <div data-role="footer">
+        <div data-role="navbar" data-position="fixed">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div><!-- /navbar -->   
+    </div>
+</div><!-- /page -->
+
+<div id="gallery" data-role="page">
+    <div class="logoContainer">
+        <a href="#home"><img class="logo" src="images/logo.png" alt="Mullinax Photography" border="0" /></a>
+    </div>
+	<div data-role="content">	
+    	<div class="artisticNav">
+            <ul data-role="listview" data-inset="true">
+                <li><a href="#babies">Babies</a></li> 
+                <li><a href="#babies">Bellies</a></li> 
+                <li><a href="#babies">Kiddos</a></li> 
+                <li><a href="#familes">Families</a></li> 
+                <li><a href="#familes">Senior</a></li> 
+                <li><a href="#familes">Other</a></li> 
+            </ul>
+        </div>
+	</div><!-- /content -->
+    <div data-role="footer">
+        <div data-role="navbar" data-position="fixed">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div><!-- /navbar -->   
+    </div>
+</div><!-- /page -->
+
+<div data-role="page" data-add-back-btn="true" id="babies" class="gallery-page">
+	<div data-role="header">
+		<h1>Babies</h1>
+	</div> 
+	<div data-role="content">	
+		<ul class="gallery">
+			<li><a href="images/full/babies1.jpg" rel="external"><img src="images/thumb/babies1.jpg" alt="baby photography" /></a></li>
+			<li><a href="images/full/babies2.jpg" rel="external"><img src="images/thumb/babies2.jpg" alt="baby photography" /></a></li>
+			<li><a href="images/full/babies3.jpg" rel="external"><img src="images/thumb/babies3.jpg" alt="baby photography" /></a></li>
+			<li><a href="images/full/babies4.jpg" rel="external"><img src="images/thumb/babies4.jpg" alt="baby photography" /></a></li>
+			<li><a href="images/full/babies5.jpg" rel="external"><img src="images/thumb/babies5.jpg" alt="baby photography" /></a></li>
+			<li><a href="images/full/babies6.jpg" rel="external"><img src="images/thumb/babies6.jpg" alt="baby photography" /></a></li>
+			<li><a href="images/full/babies7.jpg" rel="external"><img src="images/thumb/babies7.jpg" alt="baby photography" /></a></li>
+			<li><a href="images/full/babies8.jpg" rel="external"><img src="images/thumb/babies8.jpg" alt="baby photography" /></a></li>
+			<li><a href="images/full/babies9.jpg" rel="external"><img src="images/thumb/babies9.jpg" alt="baby photography" /></a></li>
+			<li><a href="images/full/babies10.jpg" rel="external"><img src="images/thumb/babies10.jpg" alt="baby photography" /></a></li>
+			<li><a href="images/full/babies11.jpg" rel="external"><img src="images/thumb/babies11.jpg" alt="baby photography" /></a></li>
+			<li><a href="images/full/babies12.jpg" rel="external"><img src="images/thumb/babies12.jpg" alt="baby photography" /></a></li>
+			<li><a href="images/full/babies13.jpg" rel="external"><img src="images/thumb/babies13.jpg" alt="baby photography" /></a></li>
+			<li><a href="images/full/babies14.jpg" rel="external"><img src="images/thumb/babies14.jpg" alt="baby photography" /></a></li>
+			<li><a href="images/full/babies15.jpg" rel="external"><img src="images/thumb/babies15.jpg" alt="baby photography" /></a></li>
+			<li><a href="images/full/babies16.jpg" rel="external"><img src="images/thumb/babies16.jpg" alt="baby photography" /></a></li>
+			<li><a href="images/full/babies17.jpg" rel="external"><img src="images/thumb/babies17.jpg" alt="baby photography" /></a></li>
+			<li><a href="images/full/babies18.jpg" rel="external"><img src="images/thumb/babies18.jpg" alt="baby photography" /></a></li>
+			<li><a href="images/full/babies19.jpg" rel="external"><img src="images/thumb/babies19.jpg" alt="baby photography" /></a></li>
+			<li><a href="images/full/babies20.jpg" rel="external"><img src="images/thumb/babies20.jpg" alt="baby photography" /></a></li>
+			<li><a href="images/full/babies21.jpg" rel="external"><img src="images/thumb/babies21.jpg" alt="baby photography" /></a></li>
+			<li><a href="images/full/babies22.jpg" rel="external"><img src="images/thumb/babies22.jpg" alt="baby photography" /></a></li>
+			<li><a href="images/full/babies23.jpg" rel="external"><img src="images/thumb/babies23.jpg" alt="baby photography" /></a></li>
+			<li><a href="images/full/babies24.jpg" rel="external"><img src="images/thumb/babies24.jpg" alt="baby photography" /></a></li>
+			<li><a href="images/full/babies25.jpg" rel="external"><img src="images/thumb/babies25.jpg" alt="baby photography" /></a></li>
+			<li><a href="images/full/babies26.jpg" rel="external"><img src="images/thumb/babies26.jpg" alt="baby photography" /></a></li>
+		</ul>
+	</div>
+</div>
+
+<div data-role="page" data-add-back-btn="true" id="familes" class="gallery-page">
+	<div data-role="header">
+		<h1>Familes</h1>
+	</div>
+	<div data-role="content">	
+		<ul class="gallery">
+			<li><a href="images/full/010.jpg" rel="external"><img src="images/thumb/010.jpg" alt="Image 010" /></a></li>
+			<!-- ommitted entries for brevity's sake -->
+			<li><a href="images/full/018.jpg" rel="external"><img src="images/thumb/018.jpg" alt="Image 018" /></a></li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>

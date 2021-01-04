@@ -1,0 +1,99 @@
+/* Needed for photoswipe */
+.gallery { list-style: none; padding: 0; margin: 0; }
+.gallery:after { clear: both; content: "."; display: block; height: 0; visibility: hidden; }
+.gallery li { float: left; width: 50%; }
+.gallery li a { display: block; margin: 5px; border: 1px solid #3c3c3c; }
+.gallery li img { display: block; width: 100%; height: auto; }
+.gallery-page .ui-content{ overflow: hidden; }
+
+/* General CSS added for the chapter */
+.logoContainer{position:absolute; top:0; } 
+.logoContainer img{width:90%; max-width:438px; } 
+#gallery{background-repeat:no-repeat; background-position: top center;transition: background-image 5s ease-in-out;}
+#home{background-repeat:no-repeat; background-position: top center;transition: background-image 5s ease-in-out;}
+#sessions{ background-color:#888; background-repeat:no-repeat; background-position: center center; } 
+#sessions h3{font-family: 'Euphoria Script', cursive, Helvetica, sans-serif; font-size:200%; font-weight:bold; margin:0;}
+
+.ui-footer.ui-bar-a{border:none;}
+
+.portrait #gallery,.portrait #home,.portrait #sessions{ background-size:auto 100% !important;}
+.landscape #gallery,.landscape #home,.landscape #sessions{background-size:100% auto !important;}
+
+.artisticNav .ui-btn-up-c {
+	border: 1px solid #CCC; 
+	background: rgba(255,255,255,.1);
+	font-weight: bold;
+	color: #2F3E46; 
+	text-shadow: 1px 1px 0 white;
+	background-image: -webkit-gradient(linear,left top,left bottom,from( rgba(255,255,255,.5) ),to( rgba(255,255,255,.7) ));
+	background-image: -webkit-linear-gradient( rgba(255,255,255,.5),rgba(255,255,255,.7) );
+	background-image: -moz-linear-gradient( rgba(255,255,255,.5),rgba(255,255,255,.7) );
+	background-image: -ms-linear-gradient( rgba(255,255,255,.5),rgba(255,255,255,.7) );
+	background-image: -o-linear-gradient( rgba(255,255,255,.5),rgba(255,255,255,.7) );
+	background-image: linear-gradient( rgba(255,255,255,.5),rgba(255,255,255,.7) );
+}
+.artisticNav{ position:absolute; bottom:30px; right:10px; }
+
+.textContainer{ background-color:#EEE;margin:-5px;}
+
+
+/* iPhone Portrait
+-----------------------------------------------------------------------------------------------------------*/
+@media all and (min-width: 320px){
+	.textContainer{ padding:120px 10px 10px 10px;}
+	.logoContainer{position:absolute; top:0; text-align:center; width:100%;}
+}
+
+/* iPhone Horizontal / Some Droids
+-----------------------------------------------------------------------------------------------------------*/
+@media all and (min-width: 480px){
+	.gallery li { width: 33.33333333%; }
+	.logoContainer img{width:60% !important;}
+}
+		   
+/* iPad Verticle
+-----------------------------------------------------------------------------------------------------------*/
+@media only screen and (min-width: 768px) {
+    .gallery li { width: 20%; }
+	.textContainer{ padding:160px 10px 10px 10px;}
+}
+
+/* iPad Horizontal
+-----------------------------------------------------------------------------------------------------------*/
+@media only screen and (min-width: 1024px) {
+    .gallery li { width: 16.66666666%; } 
+	.textContainer{float:right; width:35em; padding:2em 2em 2em 2em ; height:550px; overflow:scroll;}
+	.logoContainer{ width:438px; margin:0 auto;} 
+
+}
+
+/* Nexus 7 Horizontal
+-----------------------------------------------------------------------------------------------------------*/
+@media only screen and (min-width: 1280px) {
+    .gallery li { width: 14.285714%; }
+}
+
+/* Laptop 1440
+-----------------------------------------------------------------------------------------------------------*/
+@media only screen and (min-width: 1440px) {
+    .gallery li { width: 12.5%; }
+}
+
+/* Monitor 1600
+-----------------------------------------------------------------------------------------------------------*/
+@media only screen and (min-width: 1600px) {
+    .gallery li { width: 11.111111%; }
+}
+
+/* Monitor 1920
+-----------------------------------------------------------------------------------------------------------*/
+@media only screen and (min-width: 1920px) {
+    .gallery li { width: 10%; }
+}
+
+/* HD Screen selectors */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min--moz-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 240dpi){
+		   
+}

@@ -1,0 +1,48 @@
+
+<!DOCTYPE html> 
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <link href='chapter6.css' rel='stylesheet' type='text/css'>
+	<title>Lindsey Sterling</title> 
+	<link rel="stylesheet" href="jquery.mobile-1.2.0-rc.1.min.css" />
+	<script src="js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="js/global.js"></script>
+    <script src="js/jquery.mobile-1.2.0-rc.1.min.js"></script>
+    <script type="text/javascript" src="js/basicPlayer.js"></script>
+	<link rel="stylesheet" href="chapter6.css" />
+</head> 
+ 
+<body id="body"> 
+<div id="shadows" class="songPage" data-role="page"> 
+	<div data-role="header">
+    	<a href="basic.html" data-transition="slidedown" data-theme="c" data-icon="home" data-iconpos="notext">Home</a>
+        <h2>Shadows</h2>
+        <a class="ui-btn-right" data-transition="slidedown" data-theme="c" href="tracklist.html" data-icon="note" data-iconpos="notext" >Music</a>
+    </div>
+    <div data-role="content">	
+        <img src="images/shadows.jpg" width="100%" />
+        <p class="jsHide">
+            <audio id="shadowsAudio" controls preload="auto">
+                <source src="audio/shadows.mp3" type="audio/mpeg" />
+                <source src="audio/shadows.ogg" type="audio/ogg" />
+                Your browser is very old so you can't hear the music.
+            </audio>
+        </p>
+	</div>
+        <div class="jsShow playcontrols" data-role="footer" data-id="playcontrols" data-position="fixed">
+            <div class="progressContainer"><input  data-theme="b" data-track-theme="c" class="progressBar" type="range" name="slider-1"  value="0" min="0" max="227" data-mini="true"/></div>
+            <div data-role="navbar" class="playcontrols">
+                <ul>
+                    <li><a data-theme="c" title="skip back" class="skipback" href="javascript://" data-direction="reverse"><img src="images/xtras-gray/sg_skipback@2x.png" alt="Skip Back" height="14"/></a></li>
+                    <li><a data-theme="c" title="seek back" class="seekback" href="javascript://"><img src="images/xtras-gray/sg_rw@2x.png" alt="Seek Back" height="14"/></a></li>
+                    <li><a data-theme="c" title="play/pause" class="play" href="javascript://"><img class="playPauseImage" src="images/xtras-gray/49-play@2x.png" alt="Play/Pause" height="14"/></a></li>
+                    <li><a data-theme="c" title="seek forward" class="seek" href="javascript://"><img src="images/xtras-gray/sg_ff@2x.png" alt="Seek Forward" height="14"/></a></li>
+                    <li><a data-theme="c" title="skip forward" class="skip" href="javascript://"><img src="images/xtras-gray/sg_skip@2x.png" alt="Skip Forward" height="14"/></a></li>
+                </ul>
+            </div>
+        </div></div>
+</body>
+</html>

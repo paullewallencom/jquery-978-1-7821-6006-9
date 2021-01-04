@@ -1,0 +1,249 @@
+
+<!DOCTYPE html> 
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+	<title>Chapter 5 - News</title> 
+	<link rel="stylesheet" href="jquery.mobile-1.2.0-alpha.1.min.css" />
+	<script src="js/jquery-1.7.2.min.js"></script>
+	<script src="js/jsrender.min.js" type="text/javascript"></script>
+	<script src="js/jquery.mobile-1.2.0-alpha.1.min.js"></script>
+    <style type="text/css">
+		.twitterItem .ui-li-has-thumb .ui-btn-inner a.ui-link-inherit, #results .ui-li-static.ui-li-has-thumb{
+			min-height: 50px;
+			padding-left: 70px;
+		}
+		.twitterItem .ui-li-thumb, #results .ui-listview .ui-li-icon, #results .ui-li-content{
+			margin-top: 10px;
+			margin-left: 10px;
+		}
+		.twitterItem .ui-li-desc{
+			white-space:normal;
+			margin-left:-25px;	
+		}
+		.twitterItem .handle{
+			font-size:80%;
+			font-weight:normal;	
+			color:#aaa;
+		}
+		.twitterItem .ui-li-heading{
+			margin: 0 0 .6em -25px;
+		}
+		.ui-li-heading{white-space:normal;}
+		.ui-li-desc{white-space:normal;}
+	</style>
+</head> 
+
+<body> 
+
+<div id="home_page" data-role="page">
+    <div data-position="fixed" data-role="header" class="ui-shadow">
+        <div class="ui-bar-a"><input data-theme="c" type="search" id="q" name="q" placeholder="Enter search term" class="required"></div>
+        <div data-role="footer">		
+            <div data-role="navbar">
+                <ul>
+                    <li><a id="nearMe" href="#">Near</a></li>
+                    <li><a id="twitter" href="#" class="ui-btn-active">Twitter</a></li>
+                    <li><a id="reddit" href="#">Reddit</a></li>
+                    <li><a id="flickr" href="#">Flickr</a></li>
+                    <li><a id="feeds" href="#">Feeds</a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div><!-- /footer -->
+    </div>
+
+	<div data-role="content">	
+        <ul id="results" data-role="listview" data-dividertheme="b">
+        	<li data-role="list-divider">Trending now...</li>
+        </ul>
+	</div><!-- /content -->
+    
+		
+</div><!-- /page -->
+<script type="text/javascript">
+	$("#home_page").live("pagebeforeshow", loadTwitter);
+
+	function loadTwitter(){
+		$.mobile.silentScroll(0);
+		var searchTerm = $("#q").val();
+		
+		if(searchTerm != ""){
+			$.ajax({
+				url:"http://search.twitter.com/search.json?q="+escape(searchTerm), 
+				dataType:"jsonp",
+				success: function(data) {
+					$("#results").html($("#twitterTemplate").render(data)).listview("refresh");
+				}
+			});
+		}else{
+			$.ajax({
+				url:"https://api.twitter.com/1/trends/daily.json", 
+				dataType:"jsonp",
+				success: function(data) {
+					var keys = Object.keys(data.trends);
+					$("#results").html($("#twitterTendingTemplate").render(data.trends[keys[0]])).listview("refresh");
+				}
+			});
+		} 
+	}
+
+	var allFeeds = {
+		"sources":[
+			"http://feeds.arstechnica.com/arstechnica/index?format=xml",
+			"http://rss.slashdot.org/Slashdot/slashdot",
+			"http://www.theregister.co.uk/headlines.atom"
+		],
+		"sourcesReporting":0,
+		"entries":[]
+	};
+	
+	function assimilateFeed(data){
+		allFeeds.sourcesReporting++;
+		var feedTitle = data.responseData.feed.title;
+		for(x = 0; x < data.responseData.feed.entries.length; data.responseData.feed.entries[x++].source=feedTitle);
+		allFeeds.entries = allFeeds.entries.concat(data.responseData.feed.entries);
+		
+		if(allFeeds.sourcesReporting == allFeeds.sources.length){
+			allFeeds.entries.sort(compareDates);
+			$("#results").html($("#googleFeedTemplate").render(allFeeds)).listview("refresh");;
+			$.mobile.hidePageLoadingMsg();	
+		}
+	}
+
+	function compareDates(a,b) {
+		var aPubDate = Date.parse(a.publishedDate);
+		var bPubDate = Date.parse(b.publishedDate);
+	  if ( aPubDate < bPubDate)
+		 return 1;
+	  if (aPubDate > bPubDate)
+		 return -1;
+	  return 0;
+	}
+	
+	$("#feeds").click( function() { 
+		allFeeds.sourcesReporting = 0;
+		$.mobile.silentScroll(0);
+		for(var x = 0; x < allFeeds.sources.length; x++){
+			$.ajax({
+				url:"https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&output=json&q="+escape(allFeeds.sources[x]), 
+				dataType:"jsonp",
+				success:assimilateFeed
+			});
+		}
+	});
+		
+	
+	$("#twitter").click(loadTwitter);
+	
+	$("#nearMe").click( function() { 
+		if(navigator.geolocation){
+			$.mobile.silentScroll(0);
+			navigator.geolocation.getCurrentPosition(function(position){ //success
+				latitude = position.coords.latitude;
+				longitude = position.coords.longitude;
+				var searchTerm = $("#q").val();
+				
+				$.ajax({
+					url:"http://search.twitter.com/search.json?geocode="+latitude+","+longitude+",100mi&q="+escape(searchTerm), 
+					dataType:"jsonp",
+					success: function(data) {
+						$("#results").html($("#twitterTemplate").render(data)).listview("refresh");
+					}
+				});
+			});
+		}
+	});
+	
+	$("#reddit").click( function() { 
+		$.mobile.silentScroll(0);
+		var searchTerm = $("#q").val();
+		$.ajax({
+			url:"reddit.php?q="+escape(searchTerm), 
+			dataType:"json",
+			success: function(data) {
+				$("#results").html($("#redditTemplate").render(data)).listview("refresh");
+			}
+		}).error(function(jqXHR, textStatus, errorThrown){
+			if(textStatus == "parsererror"){
+				
+				$("#results").html($("#redditTemplate").render(data)).listview("refresh");
+			}
+		});
+	});
+	
+	$("#flickr").click( function() { 
+		$.mobile.silentScroll(0);
+		var searchTerm = $("#q").val();
+		$.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
+		{
+			tags: searchTerm,
+			tagmode: "any",
+			format: "json"
+		},function(data){
+			$("#results").html($("#flickrTemplate").render(data)).listview("refresh");
+		});
+	});
+		
+	
+</script>
+
+<script type="text/x-jsrender" id="googleFeedTemplate">
+	{{for entries}}
+		<li>
+			<a href="{{:link}}" target="_blank">
+				<h3>{{:title}}</h3>
+				<p><strong>{{:source}}</strong> - {{:publishedDate}}<br/>{{:contentSnippet}}</p>
+			</a>
+		</li>
+	{{/for}}
+</script>
+
+<script id="twitterTendingTemplate" type="text/x-jsrender">
+	<li class="trendingItem">
+		<a href="http://twitter.com/">
+			<h3>{{>name}}</h3>
+		</a>
+	</li>
+</script>
+
+<script id="twitterTemplate" type="text/x-jsrender">
+	<li data-role="list-divider">Twitter Results</li>
+	{{for results}}
+	<li class="twitterItem">
+		<a href="http://twitter.com/{{>from_user}}">
+			<img src="{{>profile_image_url}}" alt="{{>from_user_name}}" class="ui-shadow ui-corner-all" />
+			<h3>{{>from_user_name}} <span class="handle">(@{{>from_user}})<br/>{{>location}} {{if geo}}{{>geo}}{{/if}}</span></h3>
+			<p>{{>text}}</p>
+		</a>
+	</li>
+	{{/for}}
+</script>
+
+<script id="redditTemplate" type="text/x-jsrender">
+	<li data-role="list-divider">Reddit Results</li>
+	{{for data.children}}
+		<li class="redditItem">
+			<a href="{{>data.url}}">
+				<h3>{{>data.author}} <span class="handle">(score: {{>data.score}})</span></h3>
+				<p>{{>data.title}}</p>
+			</a>
+		</li>
+	{{/for}}
+</script>
+
+<script id="flickrTemplate" type="text/x-jsrender">
+	<li data-role="list-divider">Flickr Results</li>
+	{{for items}}
+		<li class="flickrItem">
+			<a href="{{>link}}">
+				<img src="{{>media.m}}" alt="{{>tags}}"/> 
+				<h3>{{>title}}</h3>
+				<p>Tags: {{>tags}}</p>
+			</a>
+		</li>
+	{{/for}}
+</script>
+</body>
+</html>

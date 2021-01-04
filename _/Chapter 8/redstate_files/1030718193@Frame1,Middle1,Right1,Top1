@@ -1,0 +1,32 @@
+function OAS_RICH(position) {
+if (position == 'Frame1') {
+document.write ('<A HREF="http://oascentral.redstate.com/RealMedia/ads/click_lx.ads/redstate.com/article/1393201226/Frame1/default/empty.gif/51522f63776c43784c3455414477786a?x" target="_top"><IMG SRC="http://imagec12.247realmedia.com/RealMedia/ads/Creatives/default/empty.gif"  WIDTH=1 HEIGHT=1 ALT="" BORDER=0 BORDER="0"></A>');
+}
+if (position == 'Middle1') {
+document.write ('<IFRAME SRC="http://ad.doubleclick.net/adi/resn.382235/;alias=eeid112a;sz=300x250;click0=http://oascentral.redstate.com/RealMedia/ads/click_lx.ads/redstate.com/article/L20/1093185981/Middle1/EaglePub/adsales_029194-RC_RSWeb_EEI-1119/1119_RS-Middle1_EEI.html/51522f63776c43784c3455414477786a?;ord=1093185981?" WIDTH=300 HEIGHT=250 MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=no BORDERCOLOR=');
+document.write ("'");
+document.write ('#000000');
+document.write ("'");
+document.write ('>\n');
+document.write ('\n');
+document.write ('<SCRIPT language=');
+document.write ("'");
+document.write ('JavaScript1.1');
+document.write ("'");
+document.write (' SRC="http://ad.doubleclick.net/adj/resn.382235/;alias=eeid112a;sz=300x250;click0=http://oascentral.redstate.com/RealMedia/ads/click_lx.ads/redstate.com/article/L20/1093185981/Middle1/EaglePub/adsales_029194-RC_RSWeb_EEI-1119/1119_RS-Middle1_EEI.html/51522f63776c43784c3455414477786a?;abr=!ie;ord=1093185981?">\n');
+document.write ('\n');
+document.write ('</SCRIPT> \n');
+document.write ('<NOSCRIPT> \n');
+document.write ('<A HREF="http://oascentral.redstate.com/RealMedia/ads/click_lx.ads/redstate.com/article/L20/1093185981/Middle1/EaglePub/adsales_029194-RC_RSWeb_EEI-1119/1119_RS-Middle1_EEI.html/51522f63776c43784c3455414477786a?http://ad.doubleclick.net/jump/resn.382235/;alias=eeid112a;sz=300x250;abr=!ie4;abr=!ie5;ord=1093185981?"> \n');
+document.write ('<IMG SRC="http://ad.doubleclick.net/ad/resn.382235/;alias=eeid112a;sz=300x250;abr=!ie4;abr=!ie5;ord=1093185981?" BORDER=0 WIDTH=300 HEIGHT=250 ALT="Advertisement"></A>\n');
+document.write ('\n');
+document.write ('</NOSCRIPT> \n');
+document.write ('</IFRAME>\n');
+}
+if (position == 'Right1') {
+document.write ('<A HREF="http://oascentral.redstate.com/RealMedia/ads/click_lx.ads/redstate.com/article/L20/1354339763/Right1/EaglePub/Regnery_HE-RSweb_House_Churchill-1119/2-Churchill-120x600_R1.gif/51522f63776c43784c3455414477786a?x" target="new"><IMG SRC="http://imagec12.247realmedia.com/RealMedia/ads/Creatives/EaglePub/Regnery_HE-RSweb_House_Churchill-1119/2-Churchill-120x600_R1.gif"  ALT=""  BORDER="0"></A>');
+}
+if (position == 'Top1') {
+document.write ('<script type="text/javascript" src="http://this.content.served.by.adshuffle.com/p/kl/46/799/r/12/4/8/ast0k3n/-3RsiDBICFFKX4NT64CsFk46W2AwajmxgzdaWewNr58=/view.js?1278841103&ASTPCT=http://oascentral.redstate.com/RealMedia/ads/click_lx.ads/redstate.com/article/L20/1278841103/Top1/EaglePub/adsales_029196-SF_RSWeb-728x90_SavaBros-1119/1120_Top1_Savabros.html/51522f63776c43784c3455414477786a?"></script>');
+}
+}

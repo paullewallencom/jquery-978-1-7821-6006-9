@@ -1,0 +1,320 @@
+
+<!DOCTYPE html> 
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/album144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/album114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/album72.png">
+    <link rel="apple-touch-icon-precomposed" href="images/album57.png">
+    <link rel="shortcut icon" href="img/images/album144.png">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>Flood.FM</title> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css" />
+    <link rel="stylesheet" href="custom.css" />
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="js/jqm_bookmark_bubble.js"></script>
+	<script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js"></script>
+</head> 
+
+<body> 
+
+<div data-role="page" data-theme="a" id="welcome"> 
+	<div data-role="content">	
+		<div class="logo-large"></div>
+    	        
+        <p><span class="glyphishWhiteGps paragraphIcon"></span>Discover local music</p>
+        
+        <p><span class="glyphishWhiteMicrophone paragraphIcon"></span>See who's performing near you</p>
+        
+        <p><a data-appEvent="getStarted" href="javascript://" data-theme="b" data-role="button" data-icon="arrow-r" data-iconpos="right" data-transition="slide">Let's Get Started</a></p>
+        
+	</div>
+</div>
+
+<div data-role="page" data-theme="a" id="initialize"> 
+	<div data-role="header">
+    	<h3>Locating</h3>
+    </div>
+
+    <div data-role="content">
+        <p>Getting your location...</p>
+    </div>
+</div>
+
+
+<div data-role="page" data-theme="a" data-add-back-btn="true" id="geoSuccess"> 
+	<div data-role="header">
+    	<h3>Found You!</h3>
+    </div>
+
+    <div data-role="content">
+    	<h2>Success!</h2>
+        <p>We've got your position</p>
+        <p>Are you in your home city? Or at least close?  If so, we can mark this as your home location and we wont have to go through that again.</p>
+        <p>
+        	<a data-role="button" data-theme="c" href="javascript://" data-appEvent="setHomeLocation">I call this area home.</a>
+        	<a data-role="button" data-theme="c" href="javascript://" data-appEvent="setNotHomeLocation">I'm traveling right now.</a>
+        </p>	   
+    </div>
+</div>
+
+<div data-role="page" data-theme="a" data-add-back-btn="true" id="bandProfile"> 
+	<div data-role="header">
+    	<h3>Band Profile</h3>
+    </div>
+
+    <div data-role="content">
+        <form>
+            <h2>Complete Your Profile</h2>
+            <p>
+                <label for="bandMame">Band/Artist Name</label>
+                <input type="text" name="name" value="">
+            </p>
+            <p>
+                <label for="bandMame">Profile Picture</label>
+                <input type="file" accept="image/*">
+            </p>
+
+            <fieldset class="ui-grid-a">
+                <div class="ui-block-a"><button type="button" data-theme="c">Cancel</button></div>
+                <div class="ui-block-b"><button type="submit" data-theme="b">Submit</button></div>	   
+            </fieldset>
+        </form>   
+    </div>
+</div>
+
+
+<div data-role="page" data-theme="a" data-add-back-btn="true" id="geoFail"> 
+	<div data-role="header">
+    	<h3>That's Weird</h3>
+    </div>
+
+    <div data-role="content">
+        <p id="gettingLocation">Something didn't work.</p>
+    </div>
+</div>
+
+<div data-role="page" data-theme="a" data-add-back-btn="true" id="home"> 
+
+	<div data-role="content">	
+
+	    <div class="logo-large"></div>
+
+		<ul data-role="listview" data-inset="true" data-theme="c" style="margin-top:0">
+        	<li><a href="#stations">Local Stations</a></li>
+            <li><a href="javascript://">Genre</a></li>
+            <li><a href="javascript://">My Station 1</a></li>
+            <li><a href="javascript://">My Station 2</a></li>
+            <li><a href="javascript://">My Station 3</a></li>
+        </ul>
+	</div>
+
+	<div data-role="footer" data-id="foo1" data-position="fixed">
+    	<div class="currentlyPlaying"></div>
+	</div>   
+</div>
+
+
+
+<div data-role="page" data-theme="a" data-add-back-btn="true" id="stations_by_region"> 
+	<div data-role="header">
+    	<h3>Stations</h3>
+    </div>
+	
+	
+	<div data-role="content">	
+		<div class="mixGenreToggle" data-role="controlgroup" data-type="horizontal">
+            <a data-theme="c" href="#stations_by_genre" data-role="button">Genre</a>
+            <a data-theme="c" href="javascript://" data-role="button" class="ui-btn-active">Region</a>
+        </div>
+        
+        <ul data-role="listview" data-inset="true" data-theme="c">
+        	<li data-role="list-divider">North East</li>
+            <li><a href="javascript://">Boston</a></li>
+            <li><a href="javascript://">NYC</a></li>
+            <li><a href="javascript://">Philly</a></li>
+            <li><a href="javascript://">DC</a></li>
+            <li data-role="list-divider">South East</li>
+            <li><a href="javascript://">Atlanta</a></li>
+            <li><a href="javascript://">Charlotte</a></li>
+            <li><a href="javascript://">...</a></li>
+            <li><a href="javascript://">...</a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+<div data-role="page" data-theme="a" data-add-back-btn="true" id="stations_by_genre"> 
+	<div data-role="header">
+    	<h3>Stations</h3>
+    </div>
+	
+	<div data-role="content">	
+		<div class="mixGenreToggle" data-role="controlgroup" data-type="horizontal">
+            <a data-theme="c" href="javascript://" data-role="button" class="ui-btn-active">Genre</a>
+            <a data-theme="c" href="#stations_by_region" data-role="button">Region</a>
+        </div>
+        <ul data-role="listview" data-inset="true" data-theme="c">
+            <li><a href="javascript://" data-appEvent="playStation" data-appEventValue="country">Country</a></li>
+            <li><a href="javascript://" data-appEvent="playStation" data-appEventValue="easylistening">Easy listening</a></li>
+            <li><a href="javascript://" data-appEvent="playStation" data-appEventValue="electronic">Electronic</a></li>
+            <li><a href="javascript://" data-appEvent="playStation" data-appEventValue="modernfolk">Modern folk</a></li>
+            <li><a href="javascript://" data-appEvent="playStation" data-appEventValue="hiphop">Hip Hop</a></li>
+            <li><a href="javascript://" data-appEvent="playStation" data-appEventValue="jazz">Jazz</a></li>
+            <li><a href="javascript://" data-appEvent="playStation" data-appEventValue="latinamerica">Latin American</a></li>
+            <li><a href="javascript://" data-appEvent="playStation" data-appEventValue="pop">Pop</a></li>
+            <li><a href="javascript://" data-appEvent="playStation" data-appEventValue="rb">R&amp;B</a></li>
+            <li><a href="javascript://" data-appEvent="playStation" data-appEventValue="rock">Rock</a></li>
+            <li><a href="javascript://" data-appEvent="playStation" data-appEventValue="ska">Ska</a></li>
+            <li><a href="javascript://" data-appEvent="playStation" data-appEventValue="other">Other</a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+<div data-role="page" data-theme="a" data-add-back-btn="true" id="search_by_title"> 
+	<div data-role="header">
+    	<h3>Search</h3>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="search_artist.php">Artists</a></li>
+                <li><a href="javascript://" class="ui-btn-active">Tracks</a></li>
+                <li><a href="#coming_soon">Sounds Like</a></li>
+            </ul>
+        </div>
+    </div>
+	
+	<div data-role="content">	
+        <ul data-role="listview" data-inset="true" data-theme="c" data-filter="true" data-filter-placeholder="Search tracks" data-filter-theme="d" data-theme="d" data-divider-theme="d"></ul>
+	</div>
+</div>
+
+
+
+<div data-role="page" data-theme="a" data-add-back-btn="true" id="search_by_artist"> 
+	<div data-role="header">
+    	<h3>Search</h3>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="javascript://" class="ui-btn-active">Artists</a></li>
+                <li><a href="#search_by_title">Tracks</a></li>
+                <li><a href="#coming_soon">Sounds Like</a></li>
+            </ul>
+        </div>
+    </div>
+	
+	<div data-role="content">	
+        <ul data-role="listview" data-inset="true" data-theme="c" data-filter="true" data-filter-placeholder="Search artists" data-filter-theme="d" data-theme="d" data-divider-theme="d"></ul>
+	</div>
+</div>
+
+
+<div data-role="page" data-theme="a" data-add-back-btn="true" id="events_by_location"> 
+	<div data-role="header">
+    	<h3>Events</h3>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="javascript://" class="ui-btn-active">Locations</a></li>
+                <li><a href="events_bands.php">Band</a></li>
+                <li><a href="events_dates.php">Date</a></li>
+            </ul>
+        </div>
+    </div>
+	
+	<div data-role="content">	
+	</div>
+</div>  
+
+
+<div data-role="page" data-theme="a" data-add-back-btn="true" id="events_by_band"> 
+	<div data-role="header">
+    	<h3>Events</h3>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="events_locations.php">Locations</a></li>
+                <li><a href="javascript://" class="ui-btn-active">Band</a></li>
+                <li><a href="events_dates.php">Date</a></li>
+            </ul>
+        </div>
+    </div>
+	
+	<div data-role="content">	
+	</div>
+</div> 
+
+
+<div data-role="page" data-theme="a" data-add-back-btn="true" id="events_by_band"> 
+	<div data-role="header">
+    	<h3>Events</h3>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="events_locations.php">Locations</a></li>
+                <li><a href="events_bands.php">Band</a></li>
+                <li><a href="javascript://" class="ui-btn-active">Date</a></li>
+            </ul>
+        </div>
+    </div>
+	
+	
+	<div data-role="content">	
+	</div>
+</div> 
+
+<div data-role="page" data-theme="a" data-add-back-btn="true" id="coming_soon"> 
+	<div data-role="header">
+    	<h3>Coming Soon</h3>
+    </div>
+	
+	
+	<div data-role="content">	
+    	<p>That feature is not currently available but we thought you might like to know that we've got its on our radar.</p>
+	</div>
+</div>  
+
+<div id="player" class="songPage" data-role="page"> 
+    
+</div>
+
+<div id="audioContainer">
+    <audio id="audio" controls></audio>
+</div>
+
+
+<div id="globalComponents">
+    <div data-role="navbar" class="bottomNavBar">
+        <ul>
+            <li><a class="glyphishIcon" data-icon="notes" href="#stations_by_region" data-transition="slideup">stations</a></li>
+            <li><a class="glyphishIcon" data-icon="magnify" href="#search_by_artist" data-transition="slideup">discover</a></li>
+            <li><a class="glyphishIcon" data-icon="calendar" href="#events_by_location" data-transition="slideup">events</a></li>
+            <li><a class="glyphishIcon" data-icon="gears" href="#settings" data-transition="slideup">settings</a></li>
+        </ul>
+    </div>
+</div>
+<script type="x-handlebars">
+<div data-role="header"><a href="#home" data-theme="c" data-icon="home" data-iconpos="notext">Home</a><h2>{{title}}</h2><a class="ui-btn-right" data-theme="c" href="#stations_by_genre" data-icon="note" data-iconpos="notext">Stations</a></div>
+       
+        <div data-role="content">   
+            <img src="{{image}}" width="100%" />
+        </div>
+        
+        <div data-role="footer" data-id="playcontrols" data-position="fixed">
+            <div class="progressContainer"><input  data-theme="b" data-track-theme="c" class="progressBar" type="range" name="slider-1"  value="0" min="0" max="227" data-mini="true"/></div>
+            <div data-role="navbar" class="playcontrols">
+                <ul>
+                    <li><a data-theme="c" title="play/pause" class="play" href="javascript://"><img class="playPauseImage" src="images/xtras-gray/49-play@2x.png" alt="Play/Pause" height="14"/></a></li>
+                    <li><a data-theme="c" title="skip forward" class="skip" href="javascript://"><img src="images/xtras-gray/sg_skip@2x.png" alt="Skip Forward" height="14"/></a></li>
+                </ul>
+            </div>  
+        </div>
+</script>
+<script src="js/app.js"></script>
+<script src="js/handlebars-1.0.rc.1.js"></script>
+</body>
+</html>

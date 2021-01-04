@@ -1,0 +1,116 @@
+.js .jsHide{display:none}
+.no-js .jsShow{display:none;}
+#news{ background-image:url(images/cork.jpeg);  background-size:256px 256px;}
+#news h1{font-size:120%;}
+#news h2{font-size:110%;}
+#home { background-image:url(images/cover.jpg); background-repeat:no-repeat; background-size:100% auto; background-attachment:fixed; }
+#homemenu{margin-left:-25px; width:50%;}
+#homemenu .ui-li{text-align:right;}
+#home ul.curl li{background:rgba(250, 250, 250, 0.8)} 
+audio{width:100%}
+.avswitch{ position:absolute; top:45px; right:8px;}
+input.progressBar{display:none !important}
+div.ui-slider{width:100%;} 
+.audioContainer{display:none;}
+.ui-navbar.playcontrols li .ui-btn .ui-btn-inner {padding-top:1em; padding-bottom:1em}
+div.progressContainer{ margin:0px 10px;}
+.ui-slider-track{margin:0px;}
+div.ui-slider.ui-mini{margin:0px;}
+	
+h1.ui-title{font-family: 'Playball', Helvetica, Arial, sans-serif; font-size:20px;}
+.twitterItem .ui-li-has-thumb .ui-btn-inner a.ui-link-inherit, #results .ui-li-static.ui-li-has-thumb{
+	min-height: 50px;
+	padding-left: 70px;
+}
+.twitterItem .ui-li-thumb, #results .ui-listview .ui-li-icon, #results .ui-li-content{
+	margin-top: 10px;
+	margin-left: 10px;
+}
+.twitterItem .ui-li-desc{
+	white-space:normal;
+	margin-left:-25px;	
+}
+.twitterItem .handle{
+	font-size:80%;
+	font-weight:normal;	
+	color:#aaa;
+}
+.twitterItem .ui-li-heading{
+	margin: 0 0 .6em -25px;
+}
+.twitterItem img{float:left; margin:0 10px 10px 0;}
+.twitterItem p{margin-top:0;}
+.twitterItem p:after{clear:both;}
+	
+/* begin page curl CSS */
+ul.curl {
+	position: relative;
+	z-index: 1; 
+	list-style: none;
+	margin: 0;
+	padding: 0; 
+}
+
+
+ul.curl li {
+	position: relative;
+	float: left;
+	padding: 10px;
+	border: 1px solid #efefef;
+	margin: 10px 0;
+	background: #fff;
+	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+	-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset; 
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset; 
+	text-align:left; 
+	width:95%;
+}
+
+
+ul.curl li:before,
+ul.curl li:after {
+	content: '';
+	z-index: -1;
+	position: absolute;
+	left: 10px;
+	bottom: 10px;
+	width: 70%;
+	max-width: 300px; 
+	max-height: 100px;
+	height: 55%;
+	-webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+	-webkit-transform: skew(-15deg) rotate(-6deg);
+	-moz-transform: skew(-15deg) rotate(-6deg);
+	-ms-transform: skew(-15deg) rotate(-6deg);
+	-o-transform: skew(-15deg) rotate(-6deg);
+	transform: skew(-15deg) rotate(-6deg);
+}
+	
+
+ul.curl li:after {
+	left: auto;
+	right: 10px;
+	-webkit-transform: skew(15deg) rotate(6deg);
+	-moz-transform: skew(15deg) rotate(6deg);
+	-ms-transform: skew(15deg) rotate(6deg);
+	-o-transform: skew(15deg) rotate(6deg);
+	transform: skew(15deg) rotate(6deg); 
+}
+/* end page curl CSS */
+
+.ui-icon-note{
+	background-image: url(images/note18.png) !important;
+	-moz-background-size: 18px 18px;
+	-o-background-size: 18px 18px;
+	-webkit-background-size: 18px 18px;
+	background-size: 18px 18px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+   only screen and (min--moz-device-pixel-ratio: 1.5),
+   only screen and (min-resolution: 240dpi) {
+	.ui-icon-note{
+		background-image: url(images/note36.png) !important;
+	}
+}

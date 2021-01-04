@@ -1,0 +1,435 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/album144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/album114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/album72.png">
+    <link rel="apple-touch-icon-precomposed" href="images/album57.png">
+    <link rel="shortcut icon" href="img/images/album144.png">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link href='http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
+	<title>Lindsey Stirling</title> 
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css" />
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="js/global.js"></script>
+    <script type="text/javascript">
+		$(document).bind("mobileinit", function(){
+			$.mobile.defaultPageTransition = "slide";
+		});
+	</script>
+	<script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js"></script>
+    <script type="text/javascript" src="js/jsrender.min.js"></script>
+    <link rel="stylesheet" href="chapter6.css" /> 
+</head> 
+ 
+<body id="body"> 
+
+<div id="home" data-role="page" data-mp3="audio/electricdaisy.mp3" data-ogg="audio/electricdaisy.ogg">
+	<div data-role="header"><h1>Lindsey Stirling</h1><a class="ui-btn-right" data-theme="c" href="#tracklist" data-icon="note" data-iconpos="notext" >Music</a></div>
+    <div data-role="content">
+    	<ul id="homemenu" data-role="listview" data-inset="true">
+        	<li><a href="#news">News</a></li>
+            <li><a href="#elements">Music</a></li>
+            <li><a href="http://itunes.apple.com/us/album/lindsey-stirling/id562100121">Buy Album</a></li>
+        </ul>
+        <div id="twitterFeed"><ul class="curl"></ul></div>
+    </div>
+    <div data-role="footer" data-id="playcontrols" data-position="fixed"></div>
+</div>
+
+<div data-role="page" id="news">
+	<div data-role="header"><a href="#home" data-theme="c" data-icon="home" data-iconpos="notext">Home</a><h2>News/Blog</h2></div> 
+    <div data-role="content"></div>
+</div>
+
+<div id="tour" data-role="page">
+	<div data-role="header"><a href="#home" data-theme="c" data-icon="home" data-iconpos="notext">Home</a><h3>Tour</h3></div>
+	<img src="images/ontour.gif" width="100%" alt="VIP Experience"/>
+    <div data-role="content">
+    	<h2>VIP Presales for Lindsey's upcoming tour have officially started!!</h2>
+        <h3>VIP Packages are $50 plus applicable fees and include the following:</h3>
+        <ul>
+            <li>1 general admission ticket to the show</li>
+            <li>Personally Meet Lindsey before the show</li>
+            <li>Photo and signature opportunity with Lindsey (bring your own camera)</li>
+            <li>Lindsey Stirling VIP Access Lanyard</li>
+            <li>Early access to purchase merchandise</li>
+            <li>Early access to the venue to find your spot</li>
+        </ul>
+        <h3>For a few select markets, we will be offering Upgrade Packages. Upgrade Packages will allow customers who have already bought a concert ticket to upgrade to the VIP Package. Upgrade Packages are $35 plus applicable fees and include the following:</h3>
+        <ul>
+        	<li>NO CONCERT TICKET INCLUDED (must purchase separately)</li>
+            <li>Personally Meet Lindsey before the show</li>
+            <li>Photo and signature opportunity with Lindsey (bring your own camera)</li>
+            <li>Lindsey Stirling VIP Access Lanyard</li>
+            <li>Early access to purchase merchandise</li>
+            <li>Early access to the venue to find your spot</li>
+        </ul>
+        <h3>Customers must already have their own ticket to the show in order to purchase an upgrade package. Do not purchase an upgrade package without purchasing your concert ticket first. Not all markets will offer upgrade packages.</h3>
+        <p><a href="http://tickets.turnupgroup.com/eventperformances.asp?evt=18" data-role="button" data-icon="arrow-r" data-iconpos="right">Purchase Tickets Now</a></p>
+    </div>
+    <div data-role="footer"></div>
+</div>
+ 
+<div id="tracklist" data-role="page"> 
+	<div data-role="header"><a href="#home" data-theme="c" data-icon="home" data-iconpos="notext">Home</a><h2>Track List</h2></div>   
+    <img src="images/lindsey-header-new1.jpeg"  width="100%" alt="" />
+	<div data-role="content">
+    	<ul data-role="listview">
+        	<li><a class="trackListLink" href="#electricdaisy">Electric Daisy</a></li>
+            <li><a class="trackListLink" href="#elements">Elements</a></li>
+            <li><a class="trackListLink" href="#shadows">Shadows</a></li>
+            <li><a class="trackListLink" href="#skyrim">Skyrim</a></li>
+            <li><a class="trackListLink" href="#crystallize">Crystallize</a></li>
+            <li><a href="http://itunes.apple.com/us/album/lindsey-stirling/id562100121">Buy from iTunes</a></li>
+            <li><a href="http://lindseystirlingviolin.com/news-and-events/mp3-downloads-from-lindseys-album-now-available-on-her-website/">Buy Lindsey's Site</a></li>
+        </ul>
+    </div>
+</div>
+
+<div id="shadows" class="songPage" data-role="page" data-mp3="audio/shadows.mp3" data-ogg="audio/shadows.ogg" data-mp4="video/shadows.mp4"> 
+	<div data-role="header"><a href="#home" data-theme="c" data-icon="home" data-iconpos="notext">Home</a><h2>Shadows</h2><a class="ui-btn-right" data-theme="c" href="#tracklist" data-icon="note" data-iconpos="notext" >Music</a></div>
+    <img src="images/shadows.jpg" width="100%" />
+    <div data-role="footer" data-id="playcontrols" data-position="fixed"></div>
+</div>
+
+<div id="elements" class="songPage" data-role="page" data-mp3="audio/elements.mp3" data-ogg="audio/elements.ogg"> 
+	<div data-role="header"><a href="#home" data-theme="c" data-icon="home" data-iconpos="notext">Home</a><h2>Elements</h2><a class="ui-btn-right" data-theme="c" href="#tracklist" data-icon="note" data-iconpos="notext" >Music</a></div>
+    <img src="images/elements.png" width="100%" />
+    <div data-role="footer" data-id="playcontrols" data-position="fixed"></div>
+</div>
+
+<div id="skyrim" class="songPage" data-role="page" data-mp3="audio/skyrim.mp3" data-ogg="audio/skyrim.ogg"> 
+	<div data-role="header"><a href="#home" data-theme="c" data-icon="home" data-iconpos="notext">Home</a><h2>Skyrim</h2><a class="ui-btn-right" data-theme="c" href="#tracklist" data-icon="note" data-iconpos="notext" >Music</a></div>
+    <img src="images/skyrim.jpg" width="100%" />
+    <div data-role="footer" data-id="playcontrols" data-position="fixed"></div>
+</div>
+
+<div id="crystallize" class="songPage" data-role="page" data-mp3="audio/crystallize.mp3" data-ogg="audio/crystallize.ogg"> 
+	<div data-role="header"><a href="#home" data-theme="c" data-icon="home" data-iconpos="notext">Home</a><h2>Crystallize</h2><a class="ui-btn-right" data-theme="c" href="#tracklist" data-icon="note" data-iconpos="notext" >Music</a></div>
+    <img src="images/crystallize.jpg" width="100%" />
+    <div data-role="footer" data-id="playcontrols" data-position="fixed"></div>
+</div>
+
+<div id="electricdaisy" class="songPage" data-role="page" data-mp3="audio/electricdaisy.mp3" data-ogg="audio/electricdaisy.ogg"> 
+	<div data-role="header"><a href="#home" data-theme="c" data-icon="home" data-iconpos="notext">Home</a><h2>Electric Daisy</h2><a class="ui-btn-right" data-theme="c" href="#tracklist" data-icon="note" data-iconpos="notext" >Music</a></div>
+    <img src="images/electricdaisy.jpg" width="100%" />
+    <div data-role="footer" data-id="playcontrols" data-position="fixed"></div>
+</div>
+
+<div id="universalPlayerControls" style="display:none">
+    <div class="progressContainer"><input  data-theme="b" data-track-theme="c" class="progressBar" type="range" name="slider-1"  value="0" min="0" max="227" data-mini="true"/></div>
+    <div data-role="navbar" class="playcontrols">
+        <ul>
+            <li><a data-theme="c" title="skip back" class="skipback" href="javascript://" data-direction="reverse"><img src="images/xtras-gray/sg_skipback@2x.png" alt="Skip Back" height="14"/></a></li>
+            <li><a data-theme="c" title="seek back" class="seekback" href="javascript://"><img src="images/xtras-gray/sg_rw@2x.png" alt="Seek Back" height="14"/></a></li>
+            <li><a data-theme="c" title="play/pause" class="play" href="javascript://"><img class="playPauseImage" src="images/xtras-gray/49-play@2x.png" alt="Play/Pause" height="14"/></a></li>
+            <li><a data-theme="c" title="seek forward" class="seek" href="javascript://"><img src="images/xtras-gray/sg_ff@2x.png" alt="Seek Forward" height="14"/></a></li>
+            <li><a data-theme="c" title="skip forward" class="skip" href="javascript://"><img src="images/xtras-gray/sg_skip@2x.png" alt="Skip Forward" height="14"/></a></li>
+        </ul>
+    </div>
+</div>
+
+<div style="display:none;">
+    <audio id="audio" controls></audio>
+    <video id="oneVideo" controls></video>
+</div>
+
+<script type="text/x-jsrender" id="googleFeedTemplate">
+	<ul class="curl">
+		{{for entries}}
+			<li>
+				<h3 class="ul-li-heading">{{:title}}</h3>
+				<p>{{:publishedDate}}<br>{{:content}}</p>
+			</li>
+		{{/for}}
+	</ul>
+</script>
+<script type="text/x-jsrender" id="tweetTemplate"></script>
+<script type="text/x-jsrender" id="twitterTemplate">
+	<li class="twitterItem">
+		<img src="{{:user.profile_image_url}}" alt="profile image" class="ui-shadow ui-corner-all" />
+		<p>{{:text}}</p>
+	</li>
+</script>
+<script type="text/javascript">
+	var media = {
+		"playing":false,
+		"debug":true,
+		"currentTrack":0,
+		"random":false,
+		"tracklist":[
+			"#electricdaisy",
+			"#elements",
+			"#crystallize",
+			"#shadows",
+			"#skyrim"
+		]
+	}
+	
+	var lastDebugTS = (new Date).getTime();
+	function debug(str){ 
+		try{
+			if(media.debug){
+				$.mobile.activePage.find("div[data-role='content']").append(""+((new Date()).getTime()-lastDebugTS)+": "+str+"<br/>");
+				lastDebugTS = (new Date).getTime();	
+			}
+		}catch(e){}
+	}
+	
+
+	//grab the audio and control elements with global variables since everythign is going to use them
+	var currentAudio = $("#audio")[0];
+	var currentAudioProgress = null;
+	var scrubberHandle = null;
+	var scrubberUpdateSpeed = 750;
+	var progressThread = null;
+	
+	//The ended and durationchange are the only events we really care about
+	currentAudio.addEventListener('ended', function(){$.mobile.activePage.find(".skip").click()}, false);
+	currentAudio.addEventListener('durationchange', function(){
+		if(currentAudio.duration > 0){
+			currentAudioProgress.attr('max',currentAudio.duration).slider("refresh");
+		}
+	});
+		
+	//On the home page
+	$("#home").live('pagebeforeshow', function(){
+		var $page = $(this);
+		
+		//bring in the latest tweet
+		$.ajax({
+			url:"http://api.twitter.com/1/statuses/user_timeline.json?screen_name="+escape("LindseyStirling"), 
+			dataType:"jsonp",
+			success: function(data) {
+				try{
+					//parse out any hyperlinks and twitter IDs and turn them into links
+					var words = data[0].text.split(" ");
+					var newMessage = "";
+					for(var x = 0; x < words.length; x++){
+						var word = words[x];
+						if(word.indexOf("http") == 0){
+							newMessage += "<a href='"+word+"' target='_blank'>"+word+"</a> ";
+						}else if(word.match(/@[a-zA-Z0-9_]*/)){
+							newMessage += "<a href='http://twitter.com/"+word.substring(1)+"' target='_blank'>"+word+"</a> ";
+						}else{
+							newMessage += word+" ";
+						}
+					}
+					data[0].text = newMessage; 
+				}catch(e){}
+				
+				//use jsRender to display the message
+				$("#twitterFeed ul").html($("#twitterTemplate").render(data[0]));
+			}
+		});
+		
+		//if we're not currently playing anything, preload audio as speicified by the page's data- attributes
+		if(!media.playing) {
+			//load MP3 by default
+			if(currentAudio.canPlayType("audio/mpeg")){currentAudio.src = $page.attr("data-mp3");}
+			
+			//load Ogg for all those purists out there
+			else{currentAudio.src = $page.attr("data-ogg");}
+			
+			//make it laod
+			currentAudio.load();
+			
+			//set the progres bar
+			currentAudioProgress = $page.find("input.progressBar");
+			
+			//set the scrubber handle
+			scrubberHandle = currentAudioProgress.closest(".progressContainer").find("a.ui-slider-handle");
+		}else{
+			//set the progress bar and scrubber handles to work with whatever is playing
+			currentAudioProgress = $page.find("input.progressBar");
+			scrubberHandle = currentAudioProgress.closest(".progressContainer").find("a.ui-slider-handle");		
+		}
+	});
+
+	//on the news page
+	$("#news").live('pageshow', function(){
+		//This import can take a while, show the laoding message
+		$.mobile.loading( 'show', {
+          text: "Loading Blog Content",
+          textVisible: true
+        });
+		
+		//load the actuall content
+		$.ajax({
+			url:"https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&output=json&q="+escape("http://lindseystirlingviolin.com/feed"), 
+			dataType:"jsonp",
+			success: function(data) {
+				//use a jsRender template to format the blog
+				$("#news .ui-content").html($("#googleFeedTemplate").render(data.responseData.feed));
+				
+				$("#news img").each(function(index, element) {
+					var $img = $(element);
+					
+					//figure out its currentWidth
+					var currentWidth = Number($img.attr("width"));
+					
+					//if it has a width and it's large
+					if(!isNaN(currentWidth) && currentWidth > 300){
+						
+						//remove the explicit width and height
+						$img.removeAttr("width").removeAttr("height");
+						
+						//make the image scale to the width
+						//of it's container but never to be 
+						//larger than its original size
+						$img.css({"max-width":currentWidth+"px","width":"100%"});
+					}
+				});				
+				
+				//hide the loading 
+				$.mobile.loading( "hide" );
+			}
+		});	
+	});
+	
+	function setCurrentMediaSources(){
+		var $page = $.mobile.activePage;
+		
+		//set the audio to whatever is playable
+		var playableSource = $page.attr("data-mp3");
+		if(!currentAudio.canPlayType("audio/mpeg")){playableSource = $page.attr("data-ogg");}
+		
+		//set the progress bar and scrubber handles
+		currentAudioProgress = $page.find("input.progressBar");
+		scrubberHandle = currentAudioProgress.closest(".progressContainer").find("a.ui-slider-handle");
+		
+		//change the source and load it. 
+		currentAudio.src = playableSource;
+		currentAudio.load();
+		
+		//if we're curerntly play, continue playing
+		if(media.playing){
+			currentAudio.play();
+			progressThread = setInterval(scrubberUpdateThread, scrubberUpdateSpeed);
+		}
+	}
+	
+	$(".songPage").live("pageshow", setCurrentMediaSources);
+	
+	$("[data-role='page']").live("pagebeforecreate", function(){
+		$(this).find("div[data-id='playcontrols']").html($("#universalPlayerControls").html());	
+	});
+	
+
+	function scrubberUpdateThread(){
+		//if the scrubber has focus, the scrubber becomes input instead of status display
+		if(scrubberHandle.hasClass("ui-focus")){
+			
+			//pause the music for now
+			if(!currentAudio.paused){
+				 currentAudio.pause();
+			}
+			
+			//grab the last position to see if we've moved
+			var lastScrubPosition = currentAudioProgress.data("lastScrubPosition");
+			if(lastScrubPosition == null) lastScrubPosition = 0;
+			
+			//if the user hasn't scrubbed
+			if(Math.floor(lastScrubPosition) == Math.floor(currentAudio.currentTime)){
+				var lastScrubUnchangedCount = currentAudioProgress.data("lastScrubUnchangedCount");
+				if(++lastScrubUnchangedCount >= 2){
+					
+					//since it's been 3 cycles that we haven't moved, remove the focus and play
+					scrubberHandle.removeClass("ui-focus");
+					currentAudioProgress.data("lastScrubUnchangedCount", 0);
+					currentAudio.play();
+				}else{
+					//store the the current position counter
+					currentAudioProgress.data("lastScrubUnchangedCount", lastScrubUnchangedCount);
+				}
+			}else{
+				//reset the current position counter
+				currentAudioProgress.data("lastScrubUnchangedCount", 0);
+			}
+			
+			//set the position of the scrubber and the currentTime position of the song itself
+			currentAudioProgress.data("lastScrubPosition", Number(currentAudioProgress.val()));
+			currentAudio.currentTime = currentAudioProgress.val();
+		}else{
+			//update the progress scrubber
+			currentAudioProgress.val(currentAudio.currentTime).slider('refresh'); 
+		}
+	}
+	
+	$("a.play").live('click', function(){ 
+		try{
+			//toggle the playing status
+			media.playing = !media.playing;
+			
+			//if we're supposed to playing..
+			if(media.playing) { 
+				
+				//do it and set the interval to watch
+				currentAudio.play();
+				progressThread = setInterval(scrubberUpdateThread, scrubberUpdateSpeed);
+				
+				//switch the playing image for pause
+				$("img.playPauseImage").attr("src","images/xtras-gray/48-pause@2x.png");
+			}else{
+				//pause the audio and clear the interval
+				currentAudio.pause();
+				
+				//switch the pause image for the playing audio
+				$("img.playPauseImage").attr("src","images/xtras-gray/49-play@2x.png");
+					
+				//kill the progress interval
+				clearInterval(progressThread);
+			}
+			
+		}catch(e){alert(e)};
+	});
+	
+	
+	$("a.seekback").live('click',function(){
+		//back 5 seconds
+		currentAudio.currentTime -= 5.0;
+	});
+	
+	$("a.seek").live('click',function(){
+		//forward 5 seconds
+		currentAudio.currentTime += 5.0;
+	});
+	
+	$("a.skipback").live('click',function(event){
+		//if we're more than 5 seconds into the song, skip back to the beginning
+		if(currentAudio.currentTime > 5){
+			currentAudio.currentTime = 0;
+		}else{
+			//othewise, change to the previous track
+			media.currentTrack--;
+			if(media.currentTrack < 0) media.currentTrack = (media.tracklist.length - 1);
+			$.mobile.changePage(media.tracklist[media.currentTrack],{
+				transition: "slide",
+				reverse: true
+			});
+		}
+	});
+	
+	$("a.skip").live('click',function(event){
+		//pause the audio and reset the time to 0
+		currentAudio.pause();
+		currentAudio.currentTime = 0;
+		
+		//change to the next track
+		media.currentTrack++;
+		if(media.currentTrack >= media.tracklist.length) media.currentTrack = 0;
+		$.mobile.changePage(media.tracklist[media.currentTrack]);
+	});	
+	
+	
+</script>
+</body>
+</html>

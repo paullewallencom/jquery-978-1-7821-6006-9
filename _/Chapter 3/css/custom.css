@@ -1,0 +1,138 @@
+@charset "UTF-8";
+/* CSS Document */
+
+h1,h2,h3,.cardo{font-family: Marvel, sans-serif;}
+.logoContainer{font-family: Marvel, sans-serif; text-align:center;margin:auto}
+.makersMark{margin:1.5em auto;font-family: Marvel, sans-serif; text-align:center;}
+.testimonials{ margin:0 auto;}
+.ui-content{ background-image:url(../images/cropfade.jpg); background-repeat:no-repeat; background-size: 100%;}
+.ui-li-desc{white-space:normal;}
+.price{font-weight:bold; float:right; padding-left:10px;}
+.homeMenu{ text-align:center;}
+.homeMenu .ui-btn{ min-width:120px;  margin:.5em;}
+
+.glyphishIcon .ui-icon{
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	border-radius: 0px;	
+	background-color:transparent;
+}
+.ui-icon-directions{
+	background-image: url(../icons/icons-gray/113-navigation.png);
+	height:28px; 
+	width:28px;
+	background-size:28px 28px;
+	margin-left: -14px !important; 
+}
+.ui-icon-iphone{
+	background-image: url(../icons/icons-gray/32-iphone.png);
+	height:28px; 
+	width:16px;
+	background-size:16px 28px;
+	margin-left: -8px !important; 
+}
+.ui-icon-facebook{
+	background-image: url(../icons/icons-gray/208-facebook.png);
+	height:28px; 
+	width:22px;
+	background-size:22px 22px;
+	margin-left: -11px !important; 
+}
+.ui-icon-utensils{
+	background-image: url(../icons/icons-gray/48-fork-and-knife.png);
+	height:28px;
+	width:18px;
+	background-size:18px 26px;
+	margin-left: -9px !important; 
+}
+label{font-weight:bold;}
+label.error,input.error{border:1px solid #f7c942;background:#fadb4e;color:#333;text-shadow:0 1px 0 #fff;background-image:-webkit-gradient(linear,left top,left bottom,from(#fceda7),to(#fbef7e));background-image:-webkit-linear-gradient(#fceda7,#fbef7e);background-image:-moz-linear-gradient(#fceda7,#fbef7e);background-image:-ms-linear-gradient(#fceda7,#fbef7e);background-image:-o-linear-gradient(#fceda7,#fbef7e);background-image:linear-gradient(#fceda7,#fbef7e)}
+
+/* begin page curl CSS */
+	ul.curl {
+		position: relative;
+		z-index: 1; 
+		list-style: none;
+		margin: 0;
+		padding: 0; 
+	}
+	
+	
+	ul.curl li {
+		position: relative;
+		float: left;
+		padding: 10px;
+		border: 1px solid #efefef;
+		margin: 10px 0;
+		background: #fff;
+		-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+		-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset; 
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset; 
+		text-align:left;
+	}
+	
+	
+	ul.curl li:before,
+	ul.curl li:after {
+		content: '';
+		z-index: -1;
+		position: absolute;
+		left: 10px;
+		bottom: 10px;
+		width: 70%;
+		max-width: 300px; 
+		max-height: 100px;
+		height: 55%;
+		-webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+		-moz-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+		-webkit-transform: skew(-15deg) rotate(-6deg);
+		-moz-transform: skew(-15deg) rotate(-6deg);
+		-ms-transform: skew(-15deg) rotate(-6deg);
+		-o-transform: skew(-15deg) rotate(-6deg);
+		transform: skew(-15deg) rotate(-6deg);
+	}
+		
+	
+	ul.curl li:after {
+		left: auto;
+		right: 10px;
+		-webkit-transform: skew(15deg) rotate(6deg);
+		-moz-transform: skew(15deg) rotate(6deg);
+		-ms-transform: skew(15deg) rotate(6deg);
+		-o-transform: skew(15deg) rotate(6deg);
+		transform: skew(15deg) rotate(6deg); 
+	}
+/* end page curl CSS */
+		
+li img.facebook{padding:0 10px 10px 0;}
+.fullSite{text-align:center;}
+.copyright{text-align:center;font-family: Marvel, sans-serif; marign-top:2em;}
+		
+
+/* Horizontal ----------*/
+@media all and (min-width: 480px){
+	.homeMenu .ui-btn{ min-width:100px;  margin:.2em;}
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+   only screen and (min--moz-device-pixel-ratio: 1.5),
+   only screen and (min-resolution: 240dpi) {
+	.ui-icon-directions{
+		background-image: url(../icons/icons-gray/113-navigation@2x.png);
+	}
+	.ui-icon-iphone{
+		background-image: url(../icons/icons-gray/32-iphone@2x.png);
+	}
+	.ui-icon-facebook{
+		background-image: url(../icons/icons-gray/208-facebook@2x.png);
+	}
+	.ui-icon-utensils{
+		background-image: url(../icons/icons-gray/48-fork-and-knife@2x.png);
+	}
+}
+
+/* iPad ----------------*/
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .homeMenu .ui-btn{ min-width:120px;  margin:.7em;}
+}

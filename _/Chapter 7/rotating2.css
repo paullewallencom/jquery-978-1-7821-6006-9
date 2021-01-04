@@ -1,0 +1,53 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#gallery{background-image:url(images/Gliser.jpg);}
+
+/* iPhone Portrait
+-----------------------------------------------------------------------------------------------------------*/
+@media all and (min-width: 320px){
+	#home{background-image:url(images/ColleenSmartphone.jpeg);}
+	#sessions{ background-image:none;} 
+}
+
+/* iPhone Horizontal / Some Droids
+-----------------------------------------------------------------------------------------------------------*/
+@media all and (min-width: 480px){
+
+}
+		   
+/* iPad Verticle
+-----------------------------------------------------------------------------------------------------------*/
+@media only screen and (min-width: 768px) {
+	#home{ background-image:url(images/Colleen.jpeg) !important;} 
+}
+
+/* iPad Horizontal
+-----------------------------------------------------------------------------------------------------------*/
+@media only screen and (min-width: 1024px) {
+	#sessions{ background-image:url(images/Colleen.jpeg) !important;} 
+}
+
+/* Nexus 7 Horizontal
+-----------------------------------------------------------------------------------------------------------*/
+@media only screen and (min-width: 1280px) {
+
+}
+
+/* Laptop 1440
+-----------------------------------------------------------------------------------------------------------*/
+@media only screen and (min-width: 1440px) {
+	#sessions{ background-image:url(images/Gliser.jpg) !important;}  
+}
+
+/* Monitor 1600
+-----------------------------------------------------------------------------------------------------------*/
+@media only screen and (min-width: 1600px) {
+
+}
+
+/* Monitor 1920
+-----------------------------------------------------------------------------------------------------------*/
+@media only screen and (min-width: 1920px) {
+
+}
